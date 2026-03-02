@@ -1,0 +1,133 @@
+.programs-page {
+    animation: fadeIn 0.6s ease;
+}
+
+.exposure-section {
+    padding: 5rem 0;
+}
+
+.exposure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.custom-list {
+    padding-left: 1.2rem;
+    list-style-type: square;
+    color: #555;
+}
+
+.custom-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.list-light {
+    color: var(--text-light);
+}
+
+.list-light li {
+    margin-bottom: 0.6rem;
+}
+
+.schedule-table-section {
+    padding: 5rem 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.schedule-table tr:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-light {
+    color: var(--text-light);
+}
+
+.bg-primary-light {
+    background-color: var(--primary-light);
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.rounded-lg {
+    border-radius: 12px;
+}
+
+.border {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.border-opacity-20 {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.roles-kpi-section {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+}
+
+.roles-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.role-card,
+.kpi-card {
+    padding: 2.5rem;
+    border-radius: 12px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid var(--primary-color);
+}
+
+.role-card:hover,
+.kpi-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+    transition: var(--transition);
+}

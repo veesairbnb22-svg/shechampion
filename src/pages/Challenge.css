@@ -1,0 +1,97 @@
+.challenge-page {
+    /* Scope */
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.gap-list {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: var(--text-dark);
+}
+
+.gap-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.image-content {
+    padding: 3rem;
+    border-radius: 12px;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content h3 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.goal-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.objectives-section {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.objective-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.objective-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.objective-number {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(74, 43, 45, 0.1);
+    line-height: 1;
+}
+
+.beneficiaries-section {
+    background-color: var(--white);
+    padding: 5rem 1rem;
+}
+
+.max-w-3xl {
+    max-width: 48rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}

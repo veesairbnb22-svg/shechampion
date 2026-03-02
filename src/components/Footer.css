@@ -1,0 +1,129 @@
+.footer {
+    padding-top: 4rem;
+    color: var(--text-light);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.brand-section .footer-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.brand-section .footer-logo span {
+    font-weight: 300;
+}
+
+.footer-description {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+}
+
+.social-icons a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.links-section ul,
+.contact-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.links-section a {
+    opacity: 0.9;
+}
+
+.links-section a:hover {
+    opacity: 1;
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+.contact-section li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    opacity: 0.9;
+}
+
+.contact-section .icon {
+    flex-shrink: 0;
+    color: var(--secondary-color);
+    margin-top: 2px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom .implementer {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

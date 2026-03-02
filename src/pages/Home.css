@@ -1,0 +1,120 @@
+.home-page {
+    /* Main page container */
+    background-color: var(--white);
+}
+
+.section-title {
+    font-size: 2.22rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Combined Intro & Commitment Section */
+.combined-intro-section {
+    padding: 6rem 0;
+    background-color: var(--bg-secondary);
+}
+
+.info-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.commitment-card {
+    background: linear-gradient(135deg, var(--white) 0%, #fff9f5 100%);
+}
+
+.text-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+/* Market Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    text-align: center;
+    padding: 3rem 2rem;
+    transition: var(--transition);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 5rem 1rem;
+}
+
+.cta-section h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-lead {
+        font-size: 1rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}

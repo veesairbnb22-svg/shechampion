@@ -1,0 +1,66 @@
+.hero {
+    padding: 10rem 0 6rem;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.primary-hero {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.secondary-hero {
+    background-color: var(--primary-color);
+    color: var(--white);
+    min-height: 40vh;
+    padding: 8rem 0 4rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.primary-hero h1,
+.secondary-hero h1 {
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.primary-hero .hero-subtitle {
+    font-weight: 500;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 50vh;
+        padding: 8rem 0 4rem;
+    }
+}
