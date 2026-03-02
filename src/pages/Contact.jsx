@@ -35,13 +35,31 @@ const Contact = () => {
                     Accept: "application/json",
                 },
                 body: JSON.stringify({
-                    access_key: "22471969-3154-4333-a508-8df6e29518d1", // Updated with user's personal key
+                    access_key: "22471969-3154-4333-a508-8df6e29518d1",
                     name: formData.name,
                     email: formData.email,
                     subject: formData.subject || "New Message from SheChampion Website",
-                    message: formData.message,
                     from_name: "SheChampion Web Contact",
-                    to_email: "info@shechampion-bbf.org"
+                    to_email: "info@shechampion-bbf.org",
+                    // Sending full HTML template in the message field for a premium look on the free tier
+                    message: `
+<div style="font-family: sans-serif; max-width: 600px; border: 1px solid #e8d5c4; border-radius: 12px; overflow: hidden;">
+    <div style="background-color: #4A2B2D; color: #F8EDDF; padding: 20px; text-align: center;">
+        <h2 style="margin: 0;">SheChampion</h2>
+        <p style="margin: 5px 0 0 0; font-size: 14px;">Contact Form Submission</p>
+    </div>
+    <div style="padding: 20px; line-height: 1.6; color: #1F1516; background-color: #ffffff;">
+        <p><strong>Sender:</strong> ${formData.name}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Subject:</strong> ${formData.subject || 'General Inquiry'}</p>
+        <div style="height: 1px; background: #e8d5c4; margin: 15px 0;"></div>
+        <p><strong>Message:</strong></p>
+        <p style="background: #fdfaf7; padding: 15px; border-left: 4px solid #4A2B2D;">${formData.message}</p>
+    </div>
+    <div style="background-color: #fcf8f3; padding: 15px; text-align: center; font-size: 11px; color: #5f3739;">
+        © 2026 SheChampion. Phase 2, Plot 84 Victor B.K. Cres, Abuja, Nigeria.
+    </div>
+</div>`
                 }),
             });
 
