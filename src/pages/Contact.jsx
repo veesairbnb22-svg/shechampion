@@ -21,22 +21,43 @@ const Contact = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('loading');
 
-        // Simulate an API call to a form submission endpoint (e.g., Formspree/Web3Forms)
-        setTimeout(() => {
-            if (formData.name && formData.email && formData.message) {
+        try {
+            // Using Web3Forms API to send email to info@shechampion-bbf.org
+            // The access key will be managed via environment variables on Vercel
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "75548685-6453-4813-81b4-2e9ca85d2639", // Replace with actual key or process.env variable
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject || "New Message from SheChampion Website",
+                    message: formData.message,
+                    from_name: "SheChampion Web Contact",
+                    to_email: "info@shechampion-bbf.org"
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: '', message: '' });
-
-                // Reset success message after 5 seconds
                 setTimeout(() => setStatus('idle'), 5000);
             } else {
                 setStatus('error');
             }
-        }, 1500);
+        } catch (error) {
+            console.error("Form submission error:", error);
+            setStatus('error');
+        }
     };
 
     return (

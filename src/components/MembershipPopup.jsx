@@ -29,9 +29,26 @@ const MembershipPopup = () => {
         e.preventDefault();
         setStatus('loading');
 
-        // Simulate API call for email submission
-        setTimeout(() => {
-            if (email) {
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "75548685-6453-4813-81b4-2e9ca85d2639", // Replace with your key
+                    from_name: "SheChampion Membership",
+                    subject: "New Member Signup Request",
+                    email: email,
+                    message: `A new user ${email} has requested to join the Network.`,
+                    to_email: "info@shechampion-bbf.org"
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
                 setStatus('success');
                 setTimeout(() => {
                     handleClose();
@@ -39,7 +56,10 @@ const MembershipPopup = () => {
             } else {
                 setStatus('error');
             }
-        }, 1500);
+        } catch (error) {
+            console.error("Submission error:", error);
+            setStatus('error');
+        }
     };
 
     if (!isOpen) return null;
