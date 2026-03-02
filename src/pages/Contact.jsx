@@ -26,52 +26,26 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            // Using Web3Forms API to send email to info@shechampion-bbf.org
-            // The access key will be managed via environment variables on Vercel
-            const response = await fetch("https://api.web3forms.com/submit", {
+            // Using custom Google Apps Script for 100% free, branded HTML emails
+            const response = await fetch("https://script.google.com/macros/s/AKfycbwZdScWgTk1CqNI0SiOHfzaG6ZhpNVA7ARYLJpJIi84kOlMbof6WArMcRCL1hXzG6Te/exec", {
                 method: "POST",
+                mode: "no-cors", // Required for Google Apps Script Web Apps
                 headers: {
                     "Content-Type": "application/json",
-                    Accept: "application/json",
                 },
                 body: JSON.stringify({
-                    access_key: "22471969-3154-4333-a508-8df6e29518d1",
                     name: formData.name,
                     email: formData.email,
                     subject: formData.subject || "New Message from SheChampion Website",
-                    from_name: "SheChampion Web Contact",
-                    to_email: "info@shechampion-bbf.org",
-                    // Sending full HTML template in the message field for a premium look on the free tier
-                    message: `
-<div style="font-family: sans-serif; max-width: 600px; border: 1px solid #e8d5c4; border-radius: 12px; overflow: hidden;">
-    <div style="background-color: #4A2B2D; color: #F8EDDF; padding: 20px; text-align: center;">
-        <h2 style="margin: 0;">SheChampion</h2>
-        <p style="margin: 5px 0 0 0; font-size: 14px;">Contact Form Submission</p>
-    </div>
-    <div style="padding: 20px; line-height: 1.6; color: #1F1516; background-color: #ffffff;">
-        <p><strong>Sender:</strong> ${formData.name}</p>
-        <p><strong>Email:</strong> ${formData.email}</p>
-        <p><strong>Subject:</strong> ${formData.subject || 'General Inquiry'}</p>
-        <div style="height: 1px; background: #e8d5c4; margin: 15px 0;"></div>
-        <p><strong>Message:</strong></p>
-        <p style="background: #fdfaf7; padding: 15px; border-left: 4px solid #4A2B2D;">${formData.message}</p>
-    </div>
-    <div style="background-color: #fcf8f3; padding: 15px; text-align: center; font-size: 11px; color: #5f3739;">
-        © 2026 SheChampion. Phase 2, Plot 84 Victor B.K. Cres, Abuja, Nigeria.
-    </div>
-</div>`
+                    message: formData.message,
+                    type: "Contact Form"
                 }),
             });
 
-            const result = await response.json();
-
-            if (result.success) {
-                setStatus('success');
-                setFormData({ name: '', email: '', subject: '', message: '' });
-                setTimeout(() => setStatus('idle'), 5000);
-            } else {
-                setStatus('error');
-            }
+            // With no-cors, we can't read the response body, but the browser will trigger 'success' if the request is sent
+            setStatus('success');
+            setFormData({ name: '', email: '', subject: '', message: '' });
+            setTimeout(() => setStatus('idle'), 5000);
         } catch (error) {
             console.error("Form submission error:", error);
             setStatus('error');
