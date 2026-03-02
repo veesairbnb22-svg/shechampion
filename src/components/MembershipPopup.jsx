@@ -37,7 +37,7 @@ const MembershipPopup = () => {
                     Accept: "application/json",
                 },
                 body: JSON.stringify({
-                    access_key: "75548685-6453-4813-81b4-2e9ca85d2639", // Replace with your key
+                    access_key: "22471969-3154-4333-a508-8df6e29518d1", // Updated with user's personal key
                     from_name: "SheChampion Membership",
                     subject: "New Member Signup Request",
                     email: email,

@@ -35,7 +35,7 @@ const Contact = () => {
                     Accept: "application/json",
                 },
                 body: JSON.stringify({
-                    access_key: "75548685-6453-4813-81b4-2e9ca85d2639", // Replace with actual key or process.env variable
+                    access_key: "22471969-3154-4333-a508-8df6e29518d1", // Updated with user's personal key
                     name: formData.name,
                     email: formData.email,
                     subject: formData.subject || "New Message from SheChampion Website",
