@@ -22,17 +22,19 @@
     align-items: center;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--white);
-    letter-spacing: -0.5px;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    font-weight: 300;
-    color: inherit;
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
 }
+
+/* Logo Styles */
 
 /* Desktop Navigation */
 .desktop-nav {
@@ -97,7 +99,7 @@
     display: none !important;
 }
 
-.header-scrolled .logo,
+.header-scrolled .logo-img,
 .header-scrolled .mobile-menu-btn {
     color: var(--primary-color);
 }

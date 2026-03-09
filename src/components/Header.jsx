@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -33,8 +34,8 @@ const Header = () => {
     return (
         <header className={`header ${isScrolled ? 'header-scrolled glass' : ''} ${location.pathname === '/' ? 'header-home' : ''}`}>
             <div className="container header-container">
-                <Link to="/" className="logo">
-                    She<span>Champion</span>
+                <Link to="/" className="logo-container">
+                    <img src={logo} alt="She Champions" className="logo-img" />
                 </Link>
 
                 {/* Desktop Navigation */}

@@ -1,22 +1,26 @@
 :root {
-  --primary-color: #4A2B2D;
-  /* Dark burgundy */
-  --primary-light: #5f3739;
-  --secondary-color: #F8EDDF;
-  /* Soft beige */
-  --secondary-dark: #e8d5c4;
-  --text-dark: #1F1516;
-  --text-light: #F8EDDF;
-  --bg-color: #FFF9F2;
-  /* Lighter beige for general background */
+  --primary-color: #9D4EDD;
+  /* Main Purple from Logo */
+  --primary-light: #B24BF3;
+  --primary-dark: #7B2CBF;
+  --secondary-color: #E0AAFF;
+  /* Light Lavender from Logo */
+  --secondary-dark: #C77DFF;
+  --text-dark: #240046;
+  /* Extremely deep purple for text */
+  --text-light: #F7EFFF;
+  --bg-color: #FCFAFF;
+  /* Minimal lavender tint for background */
+  --bg-secondary: #F3E8FF;
+  /* Slightly more visible lavender */
   --white: #ffffff;
 
   --font-family: 'Outfit', 'Inter', system-ui, sans-serif;
   --transition: all 0.3s ease;
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 24px rgba(74, 43, 45, 0.08);
-  --shadow-lg: 0 12px 32px rgba(74, 43, 45, 0.12);
+  --shadow-sm: 0 2px 8px rgba(157, 78, 221, 0.05);
+  --shadow-md: 0 8px 24px rgba(157, 78, 221, 0.08);
+  --shadow-lg: 0 12px 32px rgba(157, 78, 221, 0.12);
 }
 
 * {
@@ -81,7 +85,7 @@ img {
 }
 
 .glass-dark {
-  background: rgba(74, 43, 45, 0.85);
+  background: rgba(124, 58, 237, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
