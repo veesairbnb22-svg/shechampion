@@ -158,7 +158,7 @@ const Home = () => {
                 <div className="container">
                     <h2 className="text-white mb-4">Ready to Take the Next Step?</h2>
                     <p className="text-light mb-6">Join a collaborative ecosystem of mentors, investors, and fellow entrepreneurs.</p>
-                    <Link to="/contact" className="btn btn-secondary mt-4 cta-btn">
+                    <Link to="/contact" className="btn btn-light mt-4 cta-btn">
                         Get in Touch <ArrowRight size={20} className="ml-2" />
                     </Link>
                 </div>
