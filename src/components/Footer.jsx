@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
+import logo from '../assets/logo-white.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
                 {/* Brand & Intro */}
                 <div className="footer-section brand-section">
                     <Link to="/" className="footer-logo">
-                        She<span>Champion</span>
+                        <img src={logo} alt="She Champions" className="footer-logo-img" />
                     </Link>
                     <p className="footer-description">
                         A Women-Led Entrepreneurship, Market Access & Investment Platform. Identifying,

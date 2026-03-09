@@ -11,15 +11,14 @@
 }
 
 .brand-section .footer-logo {
-    font-size: 1.8rem;
-    font-weight: 700;
     display: inline-block;
     margin-bottom: 1rem;
-    color: var(--text-light);
 }
 
-.brand-section .footer-logo span {
-    font-weight: 300;
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 .footer-description {
