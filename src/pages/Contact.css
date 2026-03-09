@@ -1,7 +1,3 @@
-.contact-page {
-    /* Scope */
-}
-
 .contact-section {
     padding: 5rem 0;
 }
@@ -83,7 +79,7 @@
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(74, 43, 45, 0.1);
+    box-shadow: 0 0 0 2px rgba(157, 78, 221, 0.1);
     background-color: var(--white);
 }
 
